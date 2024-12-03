@@ -23,7 +23,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven without tests
-        run: mvn package -DskipTests
+        run: mvn clean package -DskipTests
 
       - name: Rename JAR file
         run: mv target/*.jar target/helloworld-${{ env.PROJECT_VERSION }}.jar
